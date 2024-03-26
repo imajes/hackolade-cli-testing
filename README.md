@@ -59,7 +59,7 @@ hackolade revengjson \
 
 > [!CAUTION]
 > The Technical name of the model has somehow reset to “new_model” without any clear reason
-> 
+>
 ![Incorrect Model Name](/_images/full/2_incorrect_model_name.png)
 
 
@@ -94,11 +94,9 @@ hackolade forweng \
 > [!CAUTION]
 > Missing index names (as expected, at this point)
 >
-![Missing Index Keys](/_images/4_missing_index_names.png)
+![Missing Index Keys](/_images/full/4_missing_index_names.png)
 
-
-
-## When using 'extended' for json schema compliance
+# When using 'extended' for json schema compliance
 
 ### Step 1: export to json
 
@@ -135,12 +133,12 @@ hackolade revengjson \
 
 > [!CAUTION]
 > The key for each index is _entirely_ missing now. Index settings appear to be retained.
-> 
+>
 ![Missing Index Keys](/_images/extended/2_missing_idx_keys.png)
 
 > [!CAUTION]
 > The Technical name of the model has somehow reset to “new_model” without any clear reason
-> 
+>
 ![Incorrect Model Name](/_images/extended/2_incorrect_model_name.png)
 
 
@@ -173,5 +171,5 @@ hackolade forweng \
 ```
 > [!CAUTION]
 > The resultant script is missing the index key, making this invalid
-> 
+>
 ![Invalid Mongo Script](/_images/extended/4_missing_index_in_shell.png)
