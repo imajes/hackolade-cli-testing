@@ -1,0 +1,104 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Greek",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "title": "_id",
+            "isActivated": true,
+            "pattern": "^[a-fA-F0-9]{24}$"
+        },
+        "alpha": {
+            "type": "string",
+            "title": "alpha",
+            "isActivated": true
+        },
+        "beta": {
+            "type": "boolean",
+            "title": "beta",
+            "isActivated": true
+        },
+        "gamma": {
+            "type": "array",
+            "title": "gamma",
+            "isActivated": true,
+            "additionalItems": true,
+            "items": {
+                "type": "string",
+                "isActivated": true
+            }
+        },
+        "delta": {
+            "type": "string",
+            "title": "delta",
+            "isActivated": true,
+            "format": "date"
+        }
+    },
+    "isActivated": true,
+    "additionalProperties": true,
+    "validationLevel": "Off",
+    "validationAction": "Warn",
+    "indexes": [
+        {
+            "id": "64e80e0f-a8ab-43f8-b3fb-2851d3cd356b",
+            "name": "greek_alpha_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "key": "15404713-32a5-47e1-b639-2e789103b391"
+                }
+            ],
+            "unique": false,
+            "dropDups": false,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "alpha, not uniq, background"
+        },
+        {
+            "id": "483a465b-db8d-4793-8fc5-80a8d2b40964",
+            "name": "greek_gamma_uniq_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "key": "2423c587-e534-4be0-ad0f-b9b5e77db93c"
+                }
+            ],
+            "unique": true,
+            "dropDups": false,
+            "sparse": false,
+            "background": false,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "gamma, uniq, not background"
+        },
+        {
+            "id": "4dd00bb8-3044-4291-87d4-34c616d348b4",
+            "name": "greek_delta_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "key": "35a20e30-6200-4074-bcf5-bef1dc0eb24f"
+                }
+            ],
+            "hashed": false,
+            "unique": false,
+            "dropDups": true,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "delta, drop dupes, background, not uniq"
+        }
+    ],
+    "sharding": {
+        "id": "313a9238-a2b7-4411-b4b4-ed643e803d77",
+        "collation": "null"
+    }
+}

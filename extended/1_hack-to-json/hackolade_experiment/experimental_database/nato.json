@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Nato",
+    "properties": {
+        "_id": {
+            "type": "objectId",
+            "title": "_id",
+            "isActivated": true
+        },
+        "echo": {
+            "type": "string",
+            "title": "echo",
+            "isActivated": true
+        },
+        "foxtrot": {
+            "type": "boolean",
+            "title": "foxtrot",
+            "isActivated": true
+        },
+        "golf": {
+            "type": "array",
+            "title": "golf",
+            "isActivated": true,
+            "additionalItems": true,
+            "items": {
+                "type": "string",
+                "isActivated": true
+            }
+        },
+        "hotel": {
+            "type": "date",
+            "title": "hotel",
+            "isActivated": true
+        }
+    },
+    "isActivated": true,
+    "additionalProperties": false,
+    "validationLevel": "Off",
+    "validationAction": "Warn",
+    "indexes": [
+        {
+            "id": "a549298b-952d-408d-a364-ac3c532ff4fa",
+            "name": "nato_echo_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "fd09a260-0e72-4406-b8ca-d0fbc225d539"
+                }
+            ],
+            "unique": false,
+            "dropDups": false,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": true,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "comments": "echo, not uniq, background"
+        },
+        {
+            "id": "b043254d-0188-4a37-b64c-015a4ad171c0",
+            "name": "nato_golf_uniq_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "517aa064-1bda-4da8-ba6d-0da6804235a6"
+                }
+            ],
+            "unique": true,
+            "dropDups": false,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": false,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "comments": "golf, uniq, not background"
+        },
+        {
+            "id": "26c10b28-ab54-4abe-aff1-7dae5305d4dc",
+            "name": "nato_hotel_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "bd7001ba-cbde-41ca-af7f-65461d8ac9a8"
+                }
+            ],
+            "unique": false,
+            "dropDups": true,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": true,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "comments": "hotel, drop dupes, background, not uniq"
+        }
+    ],
+    "sharding": {
+        "unique": true,
+        "collation": "null"
+    }
+}

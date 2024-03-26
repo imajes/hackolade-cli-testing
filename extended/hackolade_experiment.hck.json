@@ -1,0 +1,532 @@
+{
+    "modelName": "Hackolade Experiment",
+    "collections": [
+        {
+            "collectionName": "Greek",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "6f48c0d2-a5f6-48c8-9826-ed514bc36eb2",
+                    "code": "_id",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "alpha",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "c3713fad-1147-491e-8c76-66c1400eebba",
+                    "code": "alpha",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "beta",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "b4a92e57-e56b-444b-a749-a2e91528404a",
+                    "code": "beta",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "gamma",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "f26faf54-3a35-4144-b2cd-d877783d4141",
+                            "arrayItem": true
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "de5008fc-37b6-42b3-b8c1-77a06e021504",
+                    "code": "gamma",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "delta",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "6b91aa87-7162-4115-bb00-3b8c5989cd77",
+                    "code": "delta",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "675ae506-2bde-43fd-8f0a-de1bfafff9a9"
+            },
+            "isActivated": true,
+            "additionalProperties": true,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "ba85d18a-ed79-4be0-8975-dc7ee849368b",
+                    "name": "greek_alpha_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "c3713fad-1147-491e-8c76-66c1400eebba",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": false,
+                    "dropDups": false,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": true,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "comments": "alpha, not uniq, background"
+                },
+                {
+                    "GUID": "fb40680c-b790-4d75-8849-d6d36fa9d158",
+                    "name": "greek_gamma_uniq_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "de5008fc-37b6-42b3-b8c1-77a06e021504",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": true,
+                    "dropDups": false,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": false,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "comments": "gamma, uniq, not background"
+                },
+                {
+                    "GUID": "9b65a713-697c-4632-8bcb-6bbc8aeb3bcb",
+                    "name": "greek_delta_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "6b91aa87-7162-4115-bb00-3b8c5989cd77",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": false,
+                    "dropDups": true,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": true,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "hashed": false,
+                    "comments": "delta, drop dupes, background, not uniq"
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "0d39f759-092c-4f63-9ab6-7e4e64077617",
+            "bucketId": "c87135d4-2732-42d2-8e9b-4c66184f6b06",
+            "hackoladeMeta": {
+                "namingConvention": "code"
+            },
+            "code": "greek",
+            "error": {}
+        },
+        {
+            "collectionName": "Nato",
+            "type": "object",
+            "properties": [
+                {
+                    "name": "_id",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "objectId",
+                    "GUID": "5ef7c116-e530-4e40-a9c4-2d8829a247c5",
+                    "code": "_id",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "echo",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "string",
+                    "GUID": "fd09a260-0e72-4406-b8ca-d0fbc225d539",
+                    "code": "echo",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "foxtrot",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "boolean",
+                    "GUID": "111c52b3-1801-4118-b1a7-f51acf7193d6",
+                    "code": "foxtrot",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "golf",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "array",
+                    "properties": [
+                        {
+                            "hackoladeMeta": {},
+                            "isActivated": true,
+                            "type": "string",
+                            "GUID": "8d6fdbde-9730-4497-871b-66a9f72aa099",
+                            "arrayItem": true
+                        }
+                    ],
+                    "additionalItems": true,
+                    "GUID": "517aa064-1bda-4da8-ba6d-0da6804235a6",
+                    "code": "golf",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                },
+                {
+                    "name": "hotel",
+                    "hackoladeMeta": {
+                        "namingConvention": "code"
+                    },
+                    "isActivated": true,
+                    "type": "date",
+                    "primaryKey": false,
+                    "GUID": "bd7001ba-cbde-41ca-af7f-65461d8ac9a8",
+                    "code": "hotel",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    }
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "f11eb92c-1ba9-4a4d-b01c-962c0f3fccc2"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "validationLevel": "Off",
+            "validationAction": "Warn",
+            "storageEngineName": "WiredTiger",
+            "collectionUsers": [],
+            "indexes": [
+                {
+                    "GUID": "a549298b-952d-408d-a364-ac3c532ff4fa",
+                    "name": "nato_echo_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "fd09a260-0e72-4406-b8ca-d0fbc225d539",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": false,
+                    "dropDups": false,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": true,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "comments": "echo, not uniq, background"
+                },
+                {
+                    "GUID": "b043254d-0188-4a37-b64c-015a4ad171c0",
+                    "name": "nato_golf_uniq_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "517aa064-1bda-4da8-ba6d-0da6804235a6",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": true,
+                    "dropDups": false,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": false,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "comments": "golf, uniq, not background"
+                },
+                {
+                    "GUID": "26c10b28-ab54-4abe-aff1-7dae5305d4dc",
+                    "name": "nato_hotel_idx",
+                    "isActivated": true,
+                    "key": [
+                        {
+                            "keyId": "bd7001ba-cbde-41ca-af7f-65461d8ac9a8",
+                            "type": "ascending"
+                        }
+                    ],
+                    "unique": false,
+                    "dropDups": true,
+                    "sparse": false,
+                    "expireAfterSeconds": "",
+                    "background": true,
+                    "weights": "",
+                    "min": -180,
+                    "max": 180,
+                    "bits": 26,
+                    "language_override": "language",
+                    "storageEngineName": "WiredTiger",
+                    "collation": {},
+                    "comments": "hotel, drop dupes, background, not uniq"
+                }
+            ],
+            "collation": {},
+            "sharding": {
+                "unique": true,
+                "collation": "null"
+            },
+            "GUID": "6cd38659-1457-43b2-846f-85b99f6aee0c",
+            "bucketId": "c87135d4-2732-42d2-8e9b-4c66184f6b06",
+            "hackoladeMeta": {
+                "namingConvention": "code"
+            },
+            "code": "nato",
+            "error": {}
+        }
+    ],
+    "buckets": [
+        {
+            "name": "experimental_database",
+            "type": "bucket",
+            "collectionIds": [
+                "0d39f759-092c-4f63-9ab6-7e4e64077617",
+                "6cd38659-1457-43b2-846f-85b99f6aee0c"
+            ],
+            "backgroundColor": {
+                "r": 216,
+                "g": 0,
+                "b": 115,
+                "a": 1
+            },
+            "show": true,
+            "isActivated": true,
+            "GUID": "c87135d4-2732-42d2-8e9b-4c66184f6b06",
+            "hackoladeMeta": {
+                "namingConvention": "code"
+            },
+            "code": "experimental_database"
+        }
+    ],
+    "views": [],
+    "relationships": [],
+    "users": [],
+    "diagramViews": [],
+    "idToNameHashTable": {
+        "c87135d4-2732-42d2-8e9b-4c66184f6b06": "experimental_database",
+        "0d39f759-092c-4f63-9ab6-7e4e64077617": "Greek",
+        "6f48c0d2-a5f6-48c8-9826-ed514bc36eb2": "_id",
+        "c3713fad-1147-491e-8c76-66c1400eebba": "alpha",
+        "b4a92e57-e56b-444b-a749-a2e91528404a": "beta",
+        "de5008fc-37b6-42b3-b8c1-77a06e021504": "gamma",
+        "6b91aa87-7162-4115-bb00-3b8c5989cd77": "delta",
+        "6cd38659-1457-43b2-846f-85b99f6aee0c": "Nato",
+        "5ef7c116-e530-4e40-a9c4-2d8829a247c5": "_id",
+        "fd09a260-0e72-4406-b8ca-d0fbc225d539": "echo",
+        "111c52b3-1801-4118-b1a7-f51acf7193d6": "foxtrot",
+        "517aa064-1bda-4da8-ba6d-0da6804235a6": "golf",
+        "bd7001ba-cbde-41ca-af7f-65461d8ac9a8": "hotel"
+    },
+    "definitions": {
+        "type": "definitions",
+        "properties": [],
+        "GUID": "97972889-0503-452f-9bc1-94334d7f14f2"
+    },
+    "polyglotDefinitions": {
+        "type": "polyglotDefinitions",
+        "properties": [],
+        "GUID": "2f43ed17-fbd8-4b3a-a0aa-344bb07108ed"
+    },
+    "externalDefinitions": {
+        "type": "externalDefinitions",
+        "properties": [],
+        "GUID": "10f09f3b-36a9-43f8-8074-a4eacb7e2354"
+    },
+    "sources": [],
+    "decorativeSymbols": [],
+    "dbVersion": "v7.x",
+    "dbVendor": "MongoDB",
+    "appTarget": "MONGODB",
+    "creationTS": "2024-03-26T17:05:24.038Z",
+    "GUID": "dd68eae7-7bd5-408f-b217-b7b92e418d9f",
+    "hackoladeMeta": {
+        "namingConvention": "code",
+        "validationErrors": {
+            "modelName": false
+        }
+    },
+    "isLineageEnabled": false,
+    "code": "hackolade_experiment",
+    "lastModifTS": "2024-03-26T17:29:40.261Z",
+    "persistenceSchemaVersion": "7",
+    "isCreatedByPlugin": true,
+    "pluginInformation": {
+        "pluginEngineVersion": "1.0.0"
+    },
+    "applicationInformation": {
+        "version": "7.3.5"
+    },
+    "settings": {
+        "centralPane": {
+            "dbLevel": {
+                "erd": [
+                    {
+                        "GUID": "0d39f759-092c-4f63-9ab6-7e4e64077617",
+                        "x": 1042.8000000000004,
+                        "y": 1206.0000000000007,
+                        "width": 234,
+                        "height": 161,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "6cd38659-1457-43b2-846f-85b99f6aee0c",
+                        "x": 1043.2,
+                        "y": 1039.6000000000006,
+                        "width": 238,
+                        "height": 148,
+                        "color": {}
+                    }
+                ],
+                "erdDefinitions": {
+                    "erd": [],
+                    "rootPath": [],
+                    "entities": [],
+                    "decorativeSymbols": []
+                },
+                "buckets": [
+                    {
+                        "x": 1002.8000000000004,
+                        "y": 999.6000000000006,
+                        "GUID": "c87135d4-2732-42d2-8e9b-4c66184f6b06"
+                    }
+                ],
+                "collapsedNodes": [],
+                "activeRelationship": "",
+                "activeRelationshipFields": {
+                    "childField": [],
+                    "parentField": []
+                },
+                "selectedCollections": [],
+                "displayColorPicker": false,
+                "graphView": {
+                    "erd": [],
+                    "buckets": [],
+                    "decorativeSymbols": [],
+                    "forceLayout": true,
+                    "defaultLinkLength": 300
+                },
+                "diagramViews": [],
+                "decorativeSymbols": [],
+                "nestedCollectionsLayout": "horizontal",
+                "options": [
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "6cd38659-1457-43b2-846f-85b99f6aee0c"
+                    },
+                    {
+                        "autoWidth": false,
+                        "autoHeight": false,
+                        "GUID": "0d39f759-092c-4f63-9ab6-7e4e64077617"
+                    }
+                ],
+                "relationshipUpdateDisabled": false,
+                "displayOptions": {
+                    "hideErdRelationshipsNames": false
+                }
+            },
+            "collectionLevel": {},
+            "changed": false
+        },
+        "dtDiagram": {
+            "collapsedNodes": [],
+            "shouldDistributeCollections": false
+        }
+    }
+}

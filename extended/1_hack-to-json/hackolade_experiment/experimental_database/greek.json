@@ -1,0 +1,120 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Greek",
+    "properties": {
+        "_id": {
+            "type": "objectId",
+            "title": "_id",
+            "isActivated": true
+        },
+        "alpha": {
+            "type": "string",
+            "title": "alpha",
+            "isActivated": true
+        },
+        "beta": {
+            "type": "boolean",
+            "title": "beta",
+            "isActivated": true
+        },
+        "gamma": {
+            "type": "array",
+            "title": "gamma",
+            "isActivated": true,
+            "additionalItems": true,
+            "items": {
+                "type": "string",
+                "isActivated": true
+            }
+        },
+        "delta": {
+            "type": "date",
+            "title": "delta",
+            "isActivated": true
+        }
+    },
+    "isActivated": true,
+    "additionalProperties": true,
+    "validationLevel": "Off",
+    "validationAction": "Warn",
+    "indexes": [
+        {
+            "id": "ba85d18a-ed79-4be0-8975-dc7ee849368b",
+            "name": "greek_alpha_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "c3713fad-1147-491e-8c76-66c1400eebba"
+                }
+            ],
+            "unique": false,
+            "dropDups": false,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": true,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "comments": "alpha, not uniq, background"
+        },
+        {
+            "id": "fb40680c-b790-4d75-8849-d6d36fa9d158",
+            "name": "greek_gamma_uniq_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "de5008fc-37b6-42b3-b8c1-77a06e021504"
+                }
+            ],
+            "unique": true,
+            "dropDups": false,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": false,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "comments": "gamma, uniq, not background"
+        },
+        {
+            "id": "9b65a713-697c-4632-8bcb-6bbc8aeb3bcb",
+            "name": "greek_delta_idx",
+            "isActivated": true,
+            "key": [
+                {
+                    "type": "ascending",
+                    "keyId": "6b91aa87-7162-4115-bb00-3b8c5989cd77"
+                }
+            ],
+            "unique": false,
+            "dropDups": true,
+            "sparse": false,
+            "expireAfterSeconds": "",
+            "background": true,
+            "weights": "",
+            "min": -180,
+            "max": 180,
+            "bits": 26,
+            "language_override": "language",
+            "storageEngineName": "WiredTiger",
+            "collation": {},
+            "hashed": false,
+            "comments": "delta, drop dupes, background, not uniq"
+        }
+    ],
+    "sharding": {
+        "unique": true,
+        "collation": "null"
+    }
+}

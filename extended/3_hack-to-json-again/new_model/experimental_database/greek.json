@@ -1,0 +1,87 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Greek",
+    "properties": {
+        "_id": {
+            "type": "objectId",
+            "title": "_id",
+            "isActivated": true
+        },
+        "alpha": {
+            "type": "string",
+            "title": "alpha",
+            "isActivated": true
+        },
+        "beta": {
+            "type": "boolean",
+            "title": "beta",
+            "isActivated": true
+        },
+        "gamma": {
+            "type": "array",
+            "title": "gamma",
+            "isActivated": true,
+            "additionalItems": true,
+            "items": {
+                "type": "string",
+                "isActivated": true
+            }
+        },
+        "delta": {
+            "type": "date",
+            "title": "delta",
+            "isActivated": true
+        }
+    },
+    "isActivated": true,
+    "additionalProperties": true,
+    "validationLevel": "Off",
+    "validationAction": "Warn",
+    "indexes": [
+        {
+            "id": "3c218636-e962-4f1e-8755-50690ec7f698",
+            "name": "greek_alpha_idx",
+            "isActivated": true,
+            "key": [],
+            "unique": false,
+            "dropDups": false,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "alpha, not uniq, background"
+        },
+        {
+            "id": "b410f41b-d622-4513-beb0-1f86791cd8e7",
+            "name": "greek_gamma_uniq_idx",
+            "isActivated": true,
+            "key": [],
+            "unique": true,
+            "dropDups": false,
+            "sparse": false,
+            "background": false,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "gamma, uniq, not background"
+        },
+        {
+            "id": "ab27c83d-214d-44b8-81c5-f0e87adac459",
+            "name": "greek_delta_idx",
+            "isActivated": true,
+            "key": [],
+            "hashed": false,
+            "unique": false,
+            "dropDups": true,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "delta, drop dupes, background, not uniq"
+        }
+    ],
+    "sharding": {
+        "id": "1a8f29ef-8ee4-4bc4-babc-1449f55b08be",
+        "collation": "null"
+    }
+}

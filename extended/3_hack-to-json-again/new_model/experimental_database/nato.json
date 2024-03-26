@@ -1,0 +1,86 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Nato",
+    "properties": {
+        "_id": {
+            "type": "objectId",
+            "title": "_id",
+            "isActivated": true
+        },
+        "echo": {
+            "type": "string",
+            "title": "echo",
+            "isActivated": true
+        },
+        "foxtrot": {
+            "type": "boolean",
+            "title": "foxtrot",
+            "isActivated": true
+        },
+        "golf": {
+            "type": "array",
+            "title": "golf",
+            "isActivated": true,
+            "additionalItems": true,
+            "items": {
+                "type": "string",
+                "isActivated": true
+            }
+        },
+        "hotel": {
+            "type": "date",
+            "title": "hotel",
+            "isActivated": true
+        }
+    },
+    "isActivated": true,
+    "additionalProperties": false,
+    "validationLevel": "Off",
+    "validationAction": "Warn",
+    "indexes": [
+        {
+            "id": "3185457b-4a06-434b-af0c-22e807674c81",
+            "name": "nato_echo_idx",
+            "isActivated": true,
+            "key": [],
+            "unique": false,
+            "dropDups": false,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "echo, not uniq, background"
+        },
+        {
+            "id": "1480d368-0687-4d1b-a0a6-975fe048d999",
+            "name": "nato_golf_uniq_idx",
+            "isActivated": true,
+            "key": [],
+            "unique": true,
+            "dropDups": false,
+            "sparse": false,
+            "background": false,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "golf, uniq, not background"
+        },
+        {
+            "id": "2ff55351-337a-4258-89b5-fd859d46c07d",
+            "name": "nato_hotel_idx",
+            "isActivated": true,
+            "key": [],
+            "unique": false,
+            "dropDups": true,
+            "sparse": false,
+            "background": true,
+            "expireAfterSeconds": "",
+            "storageEngineName": "WiredTiger",
+            "comments": "hotel, drop dupes, background, not uniq"
+        }
+    ],
+    "sharding": {
+        "id": "f0b440e8-32e2-444b-8ad5-46579698f150",
+        "collation": "null"
+    }
+}
