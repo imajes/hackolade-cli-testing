@@ -39,19 +39,25 @@ db.createCollection("greek", {
     "validationAction": "warn"
 });
 
-db.greek.createIndex({},
+db.greek.createIndex({
+    "": 1
+},
 {
     "name": "greek_alpha_idx",
     "background": true
 });
 
-db.greek.createIndex({},
+db.greek.createIndex({
+    "": 1
+},
 {
     "name": "greek_gamma_uniq_idx",
     "unique": true
 });
 
-db.greek.createIndex({},
+db.greek.createIndex({
+    "": 1
+},
 {
     "name": "greek_delta_idx",
     "dropDups": true,

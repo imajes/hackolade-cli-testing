@@ -6,32 +6,38 @@
         "_id": {
             "type": "objectId",
             "title": "_id",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "6f48c0d2-a5f6-48c8-9826-ed514bc36eb2"
         },
         "alpha": {
             "type": "string",
             "title": "alpha",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "c3713fad-1147-491e-8c76-66c1400eebba"
         },
         "beta": {
             "type": "boolean",
             "title": "beta",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "b4a92e57-e56b-444b-a749-a2e91528404a"
         },
         "gamma": {
             "type": "array",
             "title": "gamma",
             "isActivated": true,
             "additionalItems": true,
+            "GUID": "de5008fc-37b6-42b3-b8c1-77a06e021504",
             "items": {
                 "type": "string",
-                "isActivated": true
+                "isActivated": true,
+                "GUID": "f26faf54-3a35-4144-b2cd-d877783d4141"
             }
         },
         "delta": {
             "type": "date",
             "title": "delta",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "6b91aa87-7162-4115-bb00-3b8c5989cd77"
         }
     },
     "isActivated": true,
@@ -116,5 +122,6 @@
     "sharding": {
         "unique": true,
         "collation": "null"
-    }
+    },
+    "GUID": "0d39f759-092c-4f63-9ab6-7e4e64077617"
 }

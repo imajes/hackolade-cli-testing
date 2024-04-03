@@ -1,5 +1,5 @@
 {
-    "modelName": "hackolade_experiment",
+    "modelName": "Hackolade Experiment",
     "collections": [
         {
             "collectionName": "Greek",
@@ -91,10 +91,15 @@
             "collectionUsers": [],
             "indexes": [
                 {
-                    "GUID": "3c218636-e962-4f1e-8755-50690ec7f698",
+                    "GUID": "20d79fd4-968c-4ecc-9e83-36daed136cc1",
                     "name": "greek_alpha_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "fc9645e2-4e5e-4b1a-9369-25ee0bfad517",
+                            "type": "ascending"
+                        }
+                    ],
                     "unique": false,
                     "dropDups": false,
                     "sparse": false,
@@ -104,10 +109,15 @@
                     "comments": "alpha, not uniq, background"
                 },
                 {
-                    "GUID": "b410f41b-d622-4513-beb0-1f86791cd8e7",
+                    "GUID": "4b51428e-c644-4492-84c9-4f1cc9c46053",
                     "name": "greek_gamma_uniq_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "8bdc7cf5-cbd8-40c7-903e-20b715e9dfd3",
+                            "type": "ascending"
+                        }
+                    ],
                     "unique": true,
                     "dropDups": false,
                     "sparse": false,
@@ -117,10 +127,15 @@
                     "comments": "gamma, uniq, not background"
                 },
                 {
-                    "GUID": "ab27c83d-214d-44b8-81c5-f0e87adac459",
+                    "GUID": "9eb4dd4c-581a-4fbd-a8a8-16d0a931f805",
                     "name": "greek_delta_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "510beae2-4cb8-4c39-963e-d4d49f3b1c78",
+                            "type": "ascending"
+                        }
+                    ],
                     "hashed": false,
                     "unique": false,
                     "dropDups": true,
@@ -133,7 +148,7 @@
             ],
             "collation": {},
             "sharding": {
-                "GUID": "1a8f29ef-8ee4-4bc4-babc-1449f55b08be",
+                "GUID": "d88e3353-dc10-46b3-af70-e374c2b77199",
                 "collation": "null"
             },
             "GUID": "0d39f759-092c-4f63-9ab6-7e4e64077617",
@@ -235,10 +250,15 @@
             "collectionUsers": [],
             "indexes": [
                 {
-                    "GUID": "3185457b-4a06-434b-af0c-22e807674c81",
+                    "GUID": "8a1fc9c0-9bb5-43bd-9f45-321a7f0c435e",
                     "name": "nato_echo_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "062fa444-97ab-490d-bee6-6b421cf72e6e",
+                            "type": "ascending"
+                        }
+                    ],
                     "unique": false,
                     "dropDups": false,
                     "sparse": false,
@@ -248,10 +268,15 @@
                     "comments": "echo, not uniq, background"
                 },
                 {
-                    "GUID": "1480d368-0687-4d1b-a0a6-975fe048d999",
+                    "GUID": "3ebd512c-18fd-4767-9bcb-c936149350c1",
                     "name": "nato_golf_uniq_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "566096ff-9757-49ee-ad23-59b7a571043e",
+                            "type": "ascending"
+                        }
+                    ],
                     "unique": true,
                     "dropDups": false,
                     "sparse": false,
@@ -261,10 +286,15 @@
                     "comments": "golf, uniq, not background"
                 },
                 {
-                    "GUID": "2ff55351-337a-4258-89b5-fd859d46c07d",
+                    "GUID": "43f424cc-aa61-46c7-97fb-c9fd05506b0c",
                     "name": "nato_hotel_idx",
                     "isActivated": true,
-                    "key": [],
+                    "key": [
+                        {
+                            "keyId": "9fae75cb-f3e4-4f3e-ab19-7ee9301cf967",
+                            "type": "ascending"
+                        }
+                    ],
                     "unique": false,
                     "dropDups": true,
                     "sparse": false,
@@ -276,7 +306,7 @@
             ],
             "collation": {},
             "sharding": {
-                "GUID": "f0b440e8-32e2-444b-8ad5-46579698f150",
+                "GUID": "ae761817-ffb6-496f-94d1-7764f846aa9e",
                 "collation": "null"
             },
             "GUID": "6cd38659-1457-43b2-846f-85b99f6aee0c",
@@ -352,21 +382,23 @@
     "dbVendor": "MongoDB",
     "appTarget": "MONGODB",
     "creationTS": "2024-03-26T17:05:24.038Z",
-    "GUID": "303fe48d-ffc2-41b3-b28b-38a4a49765b7",
+    "GUID": "dd68eae7-7bd5-408f-b217-b7b92e418d9f",
     "hackoladeMeta": {
         "namingConvention": "code",
-        "validationErrors": {}
+        "validationErrors": {
+            "modelName": false
+        }
     },
     "isLineageEnabled": false,
-    "code": "new_model",
-    "lastModifTS": "2024-03-26T17:44:02.758Z",
+    "code": "hackolade_experiment",
+    "lastModifTS": "2024-04-03T17:02:03.238Z",
     "persistenceSchemaVersion": "7",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "7.3.5"
+        "version": "7.3.7"
     },
     "settings": {
         "centralPane": {

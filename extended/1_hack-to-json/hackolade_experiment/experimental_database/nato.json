@@ -6,32 +6,38 @@
         "_id": {
             "type": "objectId",
             "title": "_id",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "5ef7c116-e530-4e40-a9c4-2d8829a247c5"
         },
         "echo": {
             "type": "string",
             "title": "echo",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "fd09a260-0e72-4406-b8ca-d0fbc225d539"
         },
         "foxtrot": {
             "type": "boolean",
             "title": "foxtrot",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "111c52b3-1801-4118-b1a7-f51acf7193d6"
         },
         "golf": {
             "type": "array",
             "title": "golf",
             "isActivated": true,
             "additionalItems": true,
+            "GUID": "517aa064-1bda-4da8-ba6d-0da6804235a6",
             "items": {
                 "type": "string",
-                "isActivated": true
+                "isActivated": true,
+                "GUID": "8d6fdbde-9730-4497-871b-66a9f72aa099"
             }
         },
         "hotel": {
             "type": "date",
             "title": "hotel",
-            "isActivated": true
+            "isActivated": true,
+            "GUID": "bd7001ba-cbde-41ca-af7f-65461d8ac9a8"
         }
     },
     "isActivated": true,
@@ -115,5 +121,6 @@
     "sharding": {
         "unique": true,
         "collation": "null"
-    }
+    },
+    "GUID": "6cd38659-1457-43b2-846f-85b99f6aee0c"
 }

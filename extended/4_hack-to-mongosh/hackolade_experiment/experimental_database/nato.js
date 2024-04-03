@@ -39,19 +39,25 @@ db.createCollection("nato", {
     "validationAction": "warn"
 });
 
-db.nato.createIndex({},
+db.nato.createIndex({
+    "": 1
+},
 {
     "name": "nato_echo_idx",
     "background": true
 });
 
-db.nato.createIndex({},
+db.nato.createIndex({
+    "": 1
+},
 {
     "name": "nato_golf_uniq_idx",
     "unique": true
 });
 
-db.nato.createIndex({},
+db.nato.createIndex({
+    "": 1
+},
 {
     "name": "nato_hotel_idx",
     "dropDups": true,
